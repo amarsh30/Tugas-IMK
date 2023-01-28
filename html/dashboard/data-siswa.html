@@ -37,7 +37,6 @@
       </div>
     </div>
     <!-- loader END -->
-
     <aside class="sidebar sidebar-default navs-rounded-all">
       <div class="sidebar-header d-flex align-items-center justify-content-start">
         <a href="../dashboard/index.html" class="navbar-brand">
@@ -66,7 +65,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../dashboard/index.html">
+              <a class="nav-link" aria-current="page" href="../dashboard/index.html">
                 <i class="icon">
                   <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -220,6 +219,7 @@
             </div>
           </div>
         </nav>
+        <!-- Main Table Start -->
         <!-- Nav Header Component Start -->
         <div class="iq-navbar-header" style="height: 215px">
           <div class="container-fluid iq-container">
@@ -227,8 +227,8 @@
               <div class="col-md-12">
                 <div class="flex-wrap d-flex justify-content-between align-items-center">
                   <div>
-                    <h1>Hello Marcell!</h1>
-                    <p>Selamat Datang di Aplikasi Sistem Informasi BPK Penabur.</p>
+                    <h1>Hello Devs!</h1>
+                    <p>We are on a mission to help developers like you build successful projects for FREE.</p>
                   </div>
                 </div>
               </div>
@@ -248,21 +248,188 @@
       </div>
       <div class="conatiner-fluid content-inner mt-n5 py-0">
         <div class="row">
-          <div class="col-md-12 col-lg-12">
-            <div class="row row-cols-1">
-              <div class="overflow-hidden d-slider1">
-                <ul class="p-0 m-0 mb-2 swiper-wrapper list-inline">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-8">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card" data-aos="fade-up" data-aos-delay="800">
-                  <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
-                  <div class="card-body">
-                    <div id="d-main" class="d-main"></div>
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between flex-wrap">
+                <div class="header-title">
+                  <h4 class="card-title mb-0">Daftar Data Siswa</h4>
+                </div>
+                <div class="">
+                  <a href="#" class="text-center btn btn-primary btn-icon mt-lg-0 mt-md-0 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="btn-inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </i>
+                    <span>Tambah Data Siswa</span>
+                  </a>
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Add new permission</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label for="email" class="form-label">permission title</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Permission Title" />
+                          </div>
+                          <div class="text-start">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-danger">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <a href="#" class="text-center btn btn-primary btn-icon mt-lg-0 mt-md-0 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1">
+                    <i class="btn-inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </i>
+                    <span>Riwayat Data Siswa</span>
+                  </a>
+                  <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Add new role</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label for="email" class="form-label">role title</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Role Title" />
+                          </div>
+                          <div>
+                            <span>status</span>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                              <label class="form-check-label" for="exampleRadios2"> yes </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                              <label class="form-check-label" for="exampleRadios2"> no </label>
+                            </div>
+                          </div>
+                          <div class="text-start mt-2">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-danger">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>NO</th>
+                        <th class="text-center">
+                          ADMIN
+                        </th>
+                        <th class="text-center">
+                          DEMO ADMIN
+                        </th>
+                        <th class="text-center">
+                          USER
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="">
+                        <td class="">
+                          Role
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="">
+                          Role Add
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="">
+                          Role List
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="">
+                          Permission
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="">
+                          Permission Add
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" checked />
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="">
+                          Permission List
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="text-center">
+                    <a href="./admin.html" type="button" class="btn btn-primary">Save</a>
                   </div>
                 </div>
               </div>
@@ -270,7 +437,8 @@
           </div>
         </div>
       </div>
-      
+      <!-- End Table Main -->
+
       <!-- Footer Section Start -->
       <footer class="footer">
         <div class="footer-body">
@@ -301,7 +469,6 @@
       <!-- Footer Section End -->
     </main>
     <!-- Wrapper End-->
-    
     <!-- Library Bundle Script -->
     <script src="../assets/js/core/libs.min.js"></script>
 
