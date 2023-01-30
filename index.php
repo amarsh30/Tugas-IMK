@@ -138,7 +138,7 @@ if(isset($_SESSION['admin'])){
                     window.location.replace('guru/index.php');
                     </script>";
                 }else{
-                    $sqlCek = mysqli_query($koneksi,"SELECT * FROM tbl_siswa WHERE email='$_POST[email]' AND password='$pass'");
+                    $sqlCek = mysqli_query($koneksi,"SELECT * FROM tbl_siswa WHERE email='$_POST[email]' AND password='$pass' AND deleted=0");
                     $jml = mysqli_num_rows($sqlCek);
                     $d = mysqli_fetch_array($sqlCek);
                     if ($jml > 0) {
