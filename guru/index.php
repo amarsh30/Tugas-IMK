@@ -128,7 +128,17 @@ $data = mysqli_fetch_array($sql);
         <?php
             if(isset($_GET['p'])){
                 if($_GET['p'] == 'absensi'){
-                    include '../guru/absensi/data.php';
+                    if(isset($_GET['h'])){
+                        if($_GET['h'] == 'add'){
+                            include '../guru/absensi/add.php';
+                        }elseif($_GET['h'] == 'edit'){
+                            include '../guru/absensi/edit.php';
+                        }else{
+                            include '../guru/absensi/data.php';
+                        }
+                    }else{
+                        include '../guru/absensi/data.php';
+                    }
                 }else{
                     ?>
                     <script>
