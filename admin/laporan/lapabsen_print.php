@@ -24,7 +24,7 @@
             $sql = mysqli_query($koneksi, "SELECT tbl_absensi.tgl_absen, tbl_absensi.keterangan, tbl_siswa.nis,     tbl_siswa.nama, tbl_siswa.kelas, tbl_guru.nama as namaguru
                     FROM tbl_absensi
                     JOIN tbl_guru ON tbl_guru.id = tbl_absensi.id_guru
-                    JOIN tbl_siswa ON tbl_siswa.id = tbl_absensi.id_siswa");
+                    JOIN tbl_siswa ON tbl_siswa.id = tbl_absensi.id_siswa WHERE tbl_siswa.deleted=0");
             foreach ($sql as $data) {
             ?>
                 <tr>
