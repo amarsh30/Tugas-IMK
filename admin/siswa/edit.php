@@ -116,7 +116,17 @@
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label class="form-label" for="kelas">Kelas</label>
-                                    <input type="text" class="form-control" id="kelas" name="kelas" required value="<?=$d['kelas']?>">
+                                    <select class="form-select" id="kelas" name="kelas" aria-label="Floating label select example">
+                                        <option value="7A" <?=$d['kelas']=='7A'?'selected':''?>>7A</option>
+                                        <option value="7B" <?=$d['kelas']=='7B'?'selected':''?>>7B</option>
+                                        <option value="7C" <?=$d['kelas']=='7C'?'selected':''?>>7C</option>
+                                        <option value="8A" <?=$d['kelas']=='8A'?'selected':''?>>8A</option>
+                                        <option value="8B" <?=$d['kelas']=='8B'?'selected':''?>>8B</option>
+                                        <option value="8C" <?=$d['kelas']=='8C'?'selected':''?>>8C</option>
+                                        <option value="9A" <?=$d['kelas']=='9A'?'selected':''?>>9A</option>
+                                        <option value="9B" <?=$d['kelas']=='9B'?'selected':''?>>9B</option>
+                                        <option value="9C" <?=$d['kelas']=='9C'?'selected':''?>>9C</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label class="form-label" for="alamat">Alamat</label>

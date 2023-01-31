@@ -4,7 +4,6 @@
 
 if (!isset($_SESSION['admin'])) {
 ?> <script>
-    alert('Maaf ! Anda Belum Login !!');
     window.location = '../';
 </script>
 <?php

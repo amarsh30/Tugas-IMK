@@ -113,7 +113,17 @@
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label class="form-label" for="kelas">Kelas</label>
-                                    <input type="text" class="form-control" id="kelas" name="kelas" required>
+                                    <select class="form-select" id="kelas" name="kelas" aria-label="Floating label select example">
+                                        <option value="7A" selected>7A</option>
+                                        <option value="7B">7B</option>
+                                        <option value="7C">7C</option>
+                                        <option value="8A">8A</option>
+                                        <option value="8B">8B</option>
+                                        <option value="8C">8C</option>
+                                        <option value="9A">9A</option>
+                                        <option value="9B">9B</option>
+                                        <option value="9C">9C</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label class="form-label" for="alamat">Alamat</label>

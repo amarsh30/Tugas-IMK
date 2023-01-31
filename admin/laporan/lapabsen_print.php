@@ -24,7 +24,7 @@
             $sql = mysqli_query($koneksi, "SELECT tbl_absensi.tgl_absen, tbl_absensi.keterangan, tbl_siswa.nis,     tbl_siswa.nama, tbl_siswa.kelas, tbl_guru.nama as namaguru
                     FROM tbl_absensi
                     JOIN tbl_guru ON tbl_guru.id = tbl_absensi.id_guru
-                    JOIN tbl_siswa ON tbl_siswa.id = tbl_absensi.id_siswa WHERE tbl_siswa.deleted=0");
+                    JOIN tbl_siswa ON tbl_siswa.id = tbl_absensi.id_siswa WHERE tbl_siswa.deleted=0 ORDER BY tbl_absensi.id DESC");
             foreach ($sql as $data) {
             ?>
                 <tr>
@@ -32,7 +32,7 @@
                     <td data-header="Nama"><?= $data['nama']; ?></td>
                     <td data-header="Kelas"><?= $data['kelas']; ?></td>
                     <td data-header="Guru"><?= $data['namaguru']; ?></td>
-                    <td data-header="TanggalAbsen" style="text-align: center;"><?= date('d F Y', strtotime($data['tgl_absen'])); ?></td>
+                    <td data-header="TanggalAbsen" style="text-align: center;"><?= date('d/m/Y', strtotime($data['tgl_absen'])); ?></td>
                     <td data-header="Absen"><?php if ($data['keterangan'] == 'H') {
                                                 echo 'Hadir';
                                             } elseif ($data['keterangan'] == 'S') {
