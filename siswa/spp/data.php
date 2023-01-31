@@ -80,12 +80,302 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <div class="new-user-info">
-                        <form action="" method="post" id="formspp">
-                            
-                            <button name="saveSPP" type="button" class="btn btn-success" onclick="savedata()">Bayar</button>
-                        </form>
+                    <div class="row">
+                        <div class="col-md-8 input-nis d-flex mb-3">
+                            <div class="col-md-3">
+                                <label for="inputNis" class="col-form-label fw-bold">NIS</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="inputNis" class="form-control" placeholder="" readonly
+                                    value="<?=$data['nis']?>">
+                            </div>
+                        </div>
+                        <div class="col-md-8 input-nama d-flex mb-3">
+                            <div class="col-md-3">
+                                <label for="inputNama" class="col-form-label fw-bold">Nama</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="inputNama" class="form-control" placeholder="" readonly
+                                    value="<?=$data['nama']?>">
+                            </div>
+                        </div>
+                        <div class="col-md-8 input-kelas d-flex mb-3">
+                            <div class="col-md-3">
+                                <label for="inputKelas" class="col-form-label fw-bold">Kelas</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="inputKelas" class="form-control" placeholder="" readonly
+                                    value="<?=$data['kelas']?>">
+                            </div>
+                        </div>
+                        <div class="col-md-8 input__tahun-ajaran d-flex mb-3">
+                            <div class="col-md-3">
+                                <label for="inputTahunAjaran" class="col-form-label fw-bold">Tahun Ajaran</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="inputTahunAjaran" class="form-control" placeholder="" readonly
+                                    value="2022/2023">
+                            </div>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt-5">
+                            <form action="" method="post" id="formspp">
+                                <div class="row">
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">JANUARI</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/lunas-icon.png" alt="lunas" width="50" onclick="rubahstatus('1')">
+                                                    <input type="text" name="status1" id="status1" value="0">
+                                                    <input type="text" name="statusbayar1" id="statusbayar1" value="0">
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-success text-center fs-5">Lunas
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">FEBRUARI</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="belum-lunas"
+                                                        width="50" onclick="rubahstatus('2')">
+                                                    <input type="text" name="status2" id="status2" value="0">
+                                                    <input type="text" name="statusbayar2" id="statusbayar2" value="0">
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">MARET</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('3')">
+                                                        <input type="text" name="status3" id="status3" value="0">
+                                                    <input type="text" name="statusbayar3" id="statusbayar3" value="0">
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">APRIL</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('4')">
+                                                        <input type="text" name="status4" id="status4" value="0">
+                                                    <input type="text" name="statusbayar4" id="statusbayar4" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">MEI</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('5')>
+                                                        <input type="text" name="status5" id="status5" value="0">
+                                                    <input type="text" name="statusbayar5" id="statusbayar5" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">JUNI</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="belum-lunas"
+                                                        width="50" onclick="rubahstatus('6')">
+                                                        <input type="text" name="status6" id="status6" value="0">
+                                                    <input type="text" name="statusbayar6" id="statusbayar6" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">JULI</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('7')">
+                                                        <input type="text" name="status7" id="status7" value="0">
+                                                    <input type="text" name="statusbayar7" id="statusbayar7" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">AGUSTUS</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('8')">
+                                                        <input type="text" name="status8" id="status8" value="0">
+                                                    <input type="text" name="statusbayar8" id="statusbayar8" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">SEPTEMBER</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('9')">
+                                                        <input type="text" name="status9" id="status9" value="0">
+                                                    <input type="text" name="statusbayar9" id="statusbayar9" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">OKTOBER</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="belum-lunas"
+                                                        width="50" onclick="rubahstatus('10')">
+                                                        <input type="text" name="status10" id="status10" value="0">
+                                                    <input type="text" name="statusbayar10" id="statusbayar10" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">NOVEMBER</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('11')">
+                                                        <input type="text" name="status11" id="status11" value="0">
+                                                    <input type="text" name="statusbayar11" id="statusbayar11" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <div class="card border border-secondary">
+                                            <div class="card-body-month">
+                                                <h5 class="card-title mt-2 ms-3 fw-bold">DESEMBER</h5>
+                                                <div class="d-flex justify-content-center mb-3">
+                                                    <img src="../assets/images/belum-lunas-icon.png" alt="lunas"
+                                                        width="50" onclick="rubahstatus('12')">
+                                                        <input type="text" name="status12" id="status12" value="0">
+                                                    <input type="text" name="statusbayar12" id="statusbayar12" value="0">
+
+                                                </div>
+                                                <div class="border border-secondary-light">
+                                                    <p class="card-text text-white bg-danger text-center fs-5">Belum
+                                                        Lunas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex mt-3 justify-content-between">
+                        <div class="col-md-3 input-total-bayar d-flex mb-3">
+                            <div class="col-auto">
+                                <label for="inputTotalBayar" class="col-form-label fw-normal fs-5">Total Tagihan Rp.
+                                </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" id="inputTotalBayar" class="form-control" placeholder="" value="0"
+                                    readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-3 input-bayar d-flex mb-3">
+                            <div class="col-auto">
+                                <label for="inputBayar" class="col-form-label fw-normal fs-5">Bayar Rp.</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" id="inputBayar" class="form-control" placeholder="" value="0">
+                            </div>
+                        </div>
+                        <div class="col-md-3 input-kembalian d-flex mb-3">
+                            <div class="col-auto">
+                                <label for="inputKembalian" class="col-form-label fw-normal fs-5">Kembalian Rp. </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" id="inputKembalian" class="form-control" placeholder="" value="0"
+                                    readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <button name=" saveSPP" type="button" class="btn btn-success"
+                                onclick="savedata()">Bayar</button>
+                        </div>
+                    </div>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -94,7 +384,11 @@
 </div>
 
 <script>
-    function savedata(){
+    function rubahstatus(no){
+        var kondisi = $("#statusbayar"+no).val();
+    }
+
+    function savedata() {
         Swal.fire({
             title: 'Apakah Anda Ingin <br>Membayar SPP ?',
             showDenyButton: true,

@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <head>
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <table class="table responsive-3">
+      <h3 class="text-center">Laporan Pembayaran SPP</h3>
+      <thead>
+        <tr>
+          <th class="column-primary" data-header="User"><span>NIS</span></th>
+          <th>Nama</th>
+          <th>Tanggal Pembayaran</th>
+          <th>Jumlah Pembayaran</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-header="NIS">111111111</td>
+          <td data-header="Nama">Marcell</td>
+          <td data-header="TanggalBayar">30-01-2023</td>
+          <td data-header="JumlahlBayar">Rp. 250.000</td>
+        </tr>
+        <tr>
+          <td data-header="NIS">111111111</td>
+          <td data-header="Nama">Amar</td>
+          <td data-header="TanggalBayar">30-01-2023</td>
+          <td data-header="JumlahlBayar">Rp. 250.000</td>
+        </tr>
+        <tr>
+          <td data-header="NIM">111111111</td>
+          <td data-header="Nama">Irfan</td>
+          <td data-header="TanggalBayar">30-01-2023</td>
+          <td data-header="JumlahlBayar">Rp. 250.000</td>
+        </tr>
+        <tr>
+          <td data-header="NIM">111111111</td>
+          <td data-header="Nama">Thoriq</td>
+          <td data-header="TanggalBayar">30-01-2023</td>
+          <td data-header="JumlahlBayar">Rp. 250.000</td>
+        </tr>
+        <tr>
+          <td data-header="NIM">111111111</td>
+          <td data-header="Nama">Rasya</td>
+          <td data-header="TanggalBayar">30-01-2023</td>
+          <td data-header="JumlahlBayar">Rp. 250.000</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

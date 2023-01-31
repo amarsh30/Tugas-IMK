@@ -107,6 +107,6 @@
 
 <script>
     function printdata(){
-        window.open("lapabsen_print.php?mulai="+$('#tglmulai').val()+'&selesai='+$('#tglselesai').val());
+        window.open("laporan/lapabsen_print.php?mulai="+$('#tglmulai').val()+'&selesai='+$('#tglselesai').val());
     }
 </script>
