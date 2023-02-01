@@ -131,7 +131,7 @@
                     <div class="row">
                         <div class="col-md-8 input-nis d-flex mb-3">
                             <div class="col-md-3">
-                                <label for="inputNis" class="col-form-label fw-bold">NIS</label>
+                                <label for="inputNis" class="col-form-label">NIS</label>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" id="inputNis" class="form-control" placeholder="" readonly
@@ -140,7 +140,7 @@
                         </div>
                         <div class="col-md-8 input-nama d-flex mb-3">
                             <div class="col-md-3">
-                                <label for="inputNama" class="col-form-label fw-bold">Nama</label>
+                                <label for="inputNama" class="col-form-label">Nama</label>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" id="inputNama" class="form-control" placeholder="" readonly
@@ -149,7 +149,7 @@
                         </div>
                         <div class="col-md-8 input-kelas d-flex mb-3">
                             <div class="col-md-3">
-                                <label for="inputKelas" class="col-form-label fw-bold">Kelas</label>
+                                <label for="inputKelas" class="col-form-label">Kelas</label>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" id="inputKelas" class="form-control" placeholder="" readonly
@@ -158,7 +158,7 @@
                         </div>
                         <div class="col-md-8 input__tahun-ajaran d-flex mb-3">
                             <div class="col-md-3">
-                                <label for="inputTahunAjaran" class="col-form-label fw-bold">Tahun Ajaran</label>
+                                <label for="inputTahunAjaran" class="col-form-label">Tahun Ajaran</label>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" id="inputTahunAjaran" class="form-control" placeholder="" readonly
@@ -226,7 +226,7 @@
                                                         value="<?=$bayar3?>">
                                                 </div>
                                                 <div class="border border-secondary-light">
-                                                    <<p
+                                                    <p
                                                         class="card-text text-white <?=$bayar3=='0'?'bg-danger':'bg-success'?> text-center fs-5">
                                                         <?=$bayar3=='0'?'Belum Lunas':'Lunas'?>
                                                         </p>
