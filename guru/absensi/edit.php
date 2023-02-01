@@ -96,7 +96,7 @@
                                     <div class="date-absence my-3">
                                         <p>Tanggal</p>
                                         <input type="date" class="form-control" id="tgl" name="tgl"
-                                            value="<?=$d['tgl_absen']?>" required>
+                                            value="<?=$d['tgl_absen']?>" readonly style="background-color:white" required>
                                     </div>
                                     <div class="grade-absence my-3">
                                         <p>Kelas</p>
